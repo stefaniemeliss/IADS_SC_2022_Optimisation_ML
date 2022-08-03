@@ -184,14 +184,17 @@ def animate_simulated_annealing(instance, construction, move):
 
 def main():
     random.seed(123)
-    instance = Instance(30)
+    instance = Instance(30) # 30 cities
 
-    test_construction(instance, random_construction)
+    # try different ways for constructing a solution to the traveling salesman problem
+    #test_construction(instance, random_construction)
+    test_construction(instance, nearest_neighbour_construction)
+    test_construction(instance, local_search)
 
     # test_local_search(instance, random_construction, Solution.two_opt)
 
-    # animate_local_search(instance, random_construction, Solution.two_opt)
-    # animate_simulated_annealing(instance, random_construction, Solution.two_opt)
+    #animate_local_search(instance, random_construction, Solution.two_opt)
+    #animate_simulated_annealing(instance, random_construction, Solution.two_opt)
 
 
 main()
